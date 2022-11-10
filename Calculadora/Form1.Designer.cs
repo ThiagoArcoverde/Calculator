@@ -30,18 +30,26 @@ namespace Calculadora
         private void InitializeComponent()
         {
             this.panelResult = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.labelResult = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.butNum0 = new System.Windows.Forms.Button();
             this.butNum1 = new System.Windows.Forms.Button();
             this.butNum2 = new System.Windows.Forms.Button();
             this.butNum3 = new System.Windows.Forms.Button();
             this.butNum4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.butNum5 = new System.Windows.Forms.Button();
+            this.butNum6 = new System.Windows.Forms.Button();
+            this.butNum9 = new System.Windows.Forms.Button();
+            this.butNum8 = new System.Windows.Forms.Button();
+            this.butNum7 = new System.Windows.Forms.Button();
+            this.butValueDot = new System.Windows.Forms.Button();
+            this.butValueEqual = new System.Windows.Forms.Button();
+            this.butValuePlus = new System.Windows.Forms.Button();
+            this.butValueMult = new System.Windows.Forms.Button();
+            this.butValueMinus = new System.Windows.Forms.Button();
+            this.butQuit = new System.Windows.Forms.Button();
+            this.butValueDel = new System.Windows.Forms.Button();
+            this.butValueDiv = new System.Windows.Forms.Button();
             this.panelResult.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,8 +60,19 @@ namespace Calculadora
             this.panelResult.Controls.Add(this.panel1);
             this.panelResult.Location = new System.Drawing.Point(-2, -2);
             this.panelResult.Name = "panelResult";
-            this.panelResult.Size = new System.Drawing.Size(385, 95);
+            this.panelResult.Size = new System.Drawing.Size(385, 81);
             this.panelResult.TabIndex = 0;
+            // 
+            // labelResult
+            // 
+            this.labelResult.AutoSize = true;
+            this.labelResult.Font = new System.Drawing.Font("Lucida Fax", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelResult.Location = new System.Drawing.Point(14, 21);
+            this.labelResult.Name = "labelResult";
+            this.labelResult.Size = new System.Drawing.Size(51, 32);
+            this.labelResult.TabIndex = 2;
+            this.labelResult.Text = "    ";
+            this.labelResult.Click += new System.EventHandler(this.labelResult_Click);
             // 
             // panel1
             // 
@@ -63,20 +82,9 @@ namespace Calculadora
             this.panel1.Size = new System.Drawing.Size(385, 461);
             this.panel1.TabIndex = 1;
             // 
-            // labelResult
-            // 
-            this.labelResult.AutoSize = true;
-            this.labelResult.Font = new System.Drawing.Font("Lucida Fax", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelResult.Location = new System.Drawing.Point(14, 11);
-            this.labelResult.Name = "labelResult";
-            this.labelResult.Size = new System.Drawing.Size(124, 39);
-            this.labelResult.TabIndex = 2;
-            this.labelResult.Text = "Result";
-            this.labelResult.Click += new System.EventHandler(this.labelResult_Click);
-            // 
             // butNum0
             // 
-            this.butNum0.Location = new System.Drawing.Point(50, 460);
+            this.butNum0.Location = new System.Drawing.Point(50, 466);
             this.butNum0.Name = "butNum0";
             this.butNum0.Size = new System.Drawing.Size(75, 40);
             this.butNum0.TabIndex = 1;
@@ -85,7 +93,7 @@ namespace Calculadora
             // 
             // butNum1
             // 
-            this.butNum1.Location = new System.Drawing.Point(50, 385);
+            this.butNum1.Location = new System.Drawing.Point(50, 391);
             this.butNum1.Name = "butNum1";
             this.butNum1.Size = new System.Drawing.Size(75, 40);
             this.butNum1.TabIndex = 2;
@@ -94,7 +102,7 @@ namespace Calculadora
             // 
             // butNum2
             // 
-            this.butNum2.Location = new System.Drawing.Point(160, 385);
+            this.butNum2.Location = new System.Drawing.Point(160, 391);
             this.butNum2.Name = "butNum2";
             this.butNum2.Size = new System.Drawing.Size(75, 40);
             this.butNum2.TabIndex = 3;
@@ -103,7 +111,7 @@ namespace Calculadora
             // 
             // butNum3
             // 
-            this.butNum3.Location = new System.Drawing.Point(270, 385);
+            this.butNum3.Location = new System.Drawing.Point(270, 391);
             this.butNum3.Name = "butNum3";
             this.butNum3.Size = new System.Drawing.Size(75, 40);
             this.butNum3.TabIndex = 4;
@@ -112,69 +120,158 @@ namespace Calculadora
             // 
             // butNum4
             // 
-            this.butNum4.Location = new System.Drawing.Point(50, 310);
+            this.butNum4.Location = new System.Drawing.Point(50, 316);
             this.butNum4.Name = "butNum4";
             this.butNum4.Size = new System.Drawing.Size(75, 40);
             this.butNum4.TabIndex = 5;
             this.butNum4.Text = "4";
             this.butNum4.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // butNum5
             // 
-            this.button2.Location = new System.Drawing.Point(160, 310);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 40);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "5";
-            this.button2.UseVisualStyleBackColor = true;
+            this.butNum5.Location = new System.Drawing.Point(160, 316);
+            this.butNum5.Name = "butNum5";
+            this.butNum5.Size = new System.Drawing.Size(75, 40);
+            this.butNum5.TabIndex = 6;
+            this.butNum5.Text = "5";
+            this.butNum5.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // butNum6
             // 
-            this.button3.Location = new System.Drawing.Point(270, 310);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 40);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "6";
-            this.button3.UseVisualStyleBackColor = true;
+            this.butNum6.Location = new System.Drawing.Point(270, 316);
+            this.butNum6.Name = "butNum6";
+            this.butNum6.Size = new System.Drawing.Size(75, 40);
+            this.butNum6.TabIndex = 7;
+            this.butNum6.Text = "6";
+            this.butNum6.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // butNum9
             // 
-            this.button4.Location = new System.Drawing.Point(270, 235);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 40);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "9";
-            this.button4.UseVisualStyleBackColor = true;
+            this.butNum9.Location = new System.Drawing.Point(270, 241);
+            this.butNum9.Name = "butNum9";
+            this.butNum9.Size = new System.Drawing.Size(75, 40);
+            this.butNum9.TabIndex = 8;
+            this.butNum9.Text = "9";
+            this.butNum9.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // butNum8
             // 
-            this.button5.Location = new System.Drawing.Point(160, 235);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 40);
-            this.button5.TabIndex = 9;
-            this.button5.Text = "8";
-            this.button5.UseVisualStyleBackColor = true;
+            this.butNum8.Location = new System.Drawing.Point(160, 241);
+            this.butNum8.Name = "butNum8";
+            this.butNum8.Size = new System.Drawing.Size(75, 40);
+            this.butNum8.TabIndex = 9;
+            this.butNum8.Text = "8";
+            this.butNum8.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // butNum7
             // 
-            this.button6.Location = new System.Drawing.Point(50, 235);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 40);
-            this.button6.TabIndex = 10;
-            this.button6.Text = "7";
-            this.button6.UseVisualStyleBackColor = true;
+            this.butNum7.Location = new System.Drawing.Point(50, 241);
+            this.butNum7.Name = "butNum7";
+            this.butNum7.Size = new System.Drawing.Size(75, 40);
+            this.butNum7.TabIndex = 10;
+            this.butNum7.Text = "7";
+            this.butNum7.UseVisualStyleBackColor = true;
+            // 
+            // butValueDot
+            // 
+            this.butValueDot.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butValueDot.Location = new System.Drawing.Point(160, 466);
+            this.butValueDot.Name = "butValueDot";
+            this.butValueDot.Size = new System.Drawing.Size(75, 40);
+            this.butValueDot.TabIndex = 11;
+            this.butValueDot.Text = ".";
+            this.butValueDot.UseVisualStyleBackColor = true;
+            // 
+            // butValueEqual
+            // 
+            this.butValueEqual.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butValueEqual.Location = new System.Drawing.Point(270, 466);
+            this.butValueEqual.Name = "butValueEqual";
+            this.butValueEqual.Size = new System.Drawing.Size(75, 40);
+            this.butValueEqual.TabIndex = 12;
+            this.butValueEqual.Text = "=";
+            this.butValueEqual.UseVisualStyleBackColor = true;
+            // 
+            // butValuePlus
+            // 
+            this.butValuePlus.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butValuePlus.Location = new System.Drawing.Point(50, 91);
+            this.butValuePlus.Name = "butValuePlus";
+            this.butValuePlus.Size = new System.Drawing.Size(75, 45);
+            this.butValuePlus.TabIndex = 13;
+            this.butValuePlus.Text = "+";
+            this.butValuePlus.UseVisualStyleBackColor = true;
+            // 
+            // butValueMult
+            // 
+            this.butValueMult.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butValueMult.Location = new System.Drawing.Point(160, 92);
+            this.butValueMult.Name = "butValueMult";
+            this.butValueMult.Size = new System.Drawing.Size(75, 45);
+            this.butValueMult.TabIndex = 14;
+            this.butValueMult.Text = "X";
+            this.butValueMult.UseVisualStyleBackColor = true;
+            // 
+            // butValueMinus
+            // 
+            this.butValueMinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butValueMinus.Location = new System.Drawing.Point(50, 166);
+            this.butValueMinus.Name = "butValueMinus";
+            this.butValueMinus.Size = new System.Drawing.Size(75, 45);
+            this.butValueMinus.TabIndex = 15;
+            this.butValueMinus.Text = "-";
+            this.butValueMinus.UseVisualStyleBackColor = true;
+            // 
+            // butQuit
+            // 
+            this.butQuit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butQuit.Location = new System.Drawing.Point(270, 94);
+            this.butQuit.Name = "butQuit";
+            this.butQuit.Size = new System.Drawing.Size(75, 45);
+            this.butQuit.TabIndex = 16;
+            this.butQuit.Text = "Quit";
+            this.butQuit.UseVisualStyleBackColor = true;
+            // 
+            // butValueDel
+            // 
+            this.butValueDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butValueDel.Location = new System.Drawing.Point(270, 166);
+            this.butValueDel.Name = "butValueDel";
+            this.butValueDel.Size = new System.Drawing.Size(75, 45);
+            this.butValueDel.TabIndex = 17;
+            this.butValueDel.Text = "C";
+            this.butValueDel.UseVisualStyleBackColor = true;
+            // 
+            // butValueDiv
+            // 
+            this.butValueDiv.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butValueDiv.Location = new System.Drawing.Point(160, 166);
+            this.butValueDiv.Name = "butValueDiv";
+            this.butValueDiv.Size = new System.Drawing.Size(75, 45);
+            this.butValueDiv.TabIndex = 18;
+            this.butValueDiv.Text = "/";
+            this.butValueDiv.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GrayText;
-            this.ClientSize = new System.Drawing.Size(382, 553);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.ClientSize = new System.Drawing.Size(384, 561);
+            this.Controls.Add(this.butValueDiv);
+            this.Controls.Add(this.butValueDel);
+            this.Controls.Add(this.butQuit);
+            this.Controls.Add(this.butValueMinus);
+            this.Controls.Add(this.butValueMult);
+            this.Controls.Add(this.butValuePlus);
+            this.Controls.Add(this.butValueEqual);
+            this.Controls.Add(this.butValueDot);
+            this.Controls.Add(this.butNum7);
+            this.Controls.Add(this.butNum8);
+            this.Controls.Add(this.butNum9);
+            this.Controls.Add(this.butNum6);
+            this.Controls.Add(this.butNum5);
             this.Controls.Add(this.butNum4);
             this.Controls.Add(this.butNum3);
             this.Controls.Add(this.butNum2);
@@ -182,7 +279,10 @@ namespace Calculadora
             this.Controls.Add(this.butNum0);
             this.Controls.Add(this.panelResult);
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(400, 600);
+            this.MinimumSize = new System.Drawing.Size(400, 600);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculator";
             this.panelResult.ResumeLayout(false);
             this.panelResult.PerformLayout();
@@ -200,11 +300,19 @@ namespace Calculadora
         private System.Windows.Forms.Button butNum2;
         private System.Windows.Forms.Button butNum3;
         private System.Windows.Forms.Button butNum4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button butNum5;
+        private System.Windows.Forms.Button butNum6;
+        private System.Windows.Forms.Button butNum9;
+        private System.Windows.Forms.Button butNum8;
+        private System.Windows.Forms.Button butNum7;
+        private System.Windows.Forms.Button butValueDot;
+        private System.Windows.Forms.Button butValueEqual;
+        private System.Windows.Forms.Button butValuePlus;
+        private System.Windows.Forms.Button butValueMult;
+        private System.Windows.Forms.Button butValueMinus;
+        private System.Windows.Forms.Button butQuit;
+        private System.Windows.Forms.Button butValueDel;
+        private System.Windows.Forms.Button butValueDiv;
     }
 }
 
