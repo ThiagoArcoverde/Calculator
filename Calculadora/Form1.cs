@@ -147,5 +147,22 @@ namespace Calculadora
             butValueMinus.ForeColor = System.Drawing.Color.White;
             butValueDiv.ForeColor = System.Drawing.Color.White;
         }
+
+        private void butQuit_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
+
+        private void butValueDel_Click(object sender, EventArgs e)
+        {
+            butValuePlus.ForeColor = System.Drawing.Color.White;
+            butValueMult.ForeColor = System.Drawing.Color.White;
+            butValueMinus.ForeColor = System.Drawing.Color.White;
+            butValueDiv.ForeColor = System.Drawing.Color.White;
+
+            labelResult.Text = "";
+            value = new Value();
+            bool dot = false;                       //necessary in case the user resets a floating number
+        }
     }
 }

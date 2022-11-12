@@ -365,6 +365,7 @@ namespace Calculadora
             this.butQuit.TabIndex = 16;
             this.butQuit.Text = "Quit";
             this.butQuit.UseVisualStyleBackColor = true;
+            this.butQuit.Click += new System.EventHandler(this.butQuit_Click);
             // 
             // butValueDel
             // 
@@ -381,6 +382,7 @@ namespace Calculadora
             this.butValueDel.TabIndex = 17;
             this.butValueDel.Text = "C";
             this.butValueDel.UseVisualStyleBackColor = true;
+            this.butValueDel.Click += new System.EventHandler(this.butValueDel_Click);
             // 
             // butValueDiv
             // 
