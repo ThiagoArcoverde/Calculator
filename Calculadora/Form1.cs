@@ -7,15 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace Calculadora
 {
     public partial class Form1 : Form
     {
         bool dot = false;
-        bool sign = false;
-        String value1;
-        String value2;
+        List<Value> numList = new List<Value>();
+        Value value = new Value();
+
         public Form1()
         {
             InitializeComponent();
@@ -23,18 +24,9 @@ namespace Calculadora
 
         private void addChar(String character)
         {
-            if (sign == true)
-            {
-                value1 = labelResult.Text;
-                value1 = value1 + character;
-                labelResult.Text = value1;
-            }
-            else
-            {
-                value2 = labelResult.Text;
-                value2 = value2 + character;
-                labelResult.Text = value2;
-            }
+            value.numString = labelResult.Text;
+            value.numString = value.numString + character;
+            labelResult.Text = value.numString;
         }
 
         private void butNum0_Click(object sender, EventArgs e)
@@ -89,11 +81,59 @@ namespace Calculadora
 
         private void butValueDot_Click(object sender, EventArgs e)
         {
-            if(dot == false)
+            if (dot == false)
             {
                 addChar(".");
                 dot = true;
             }
+        }
+
+        private void butValueMinus_Click(object sender, EventArgs e)
+        {
+            labelResult.Text = "";
+            value.sign = "-";
+            value.numDouble = Convert.ToDouble(value.numString);
+            numList.Add(value);
+            butValuePlus.ForeColor = System.Drawing.Color.White;
+            butValueMult.ForeColor = System.Drawing.Color.White;
+            butValueMinus.ForeColor = System.Drawing.Color.Green;
+            butValueDiv.ForeColor = System.Drawing.Color.White;
+        }
+
+        private void butValueMult_Click(object sender, EventArgs e)
+        {
+            labelResult.Text = "";
+            value.sign = "*";
+            value.numDouble = Convert.ToDouble(value.numString);
+            numList.Add(value);
+            butValuePlus.ForeColor = System.Drawing.Color.White;
+            butValueMult.ForeColor = System.Drawing.Color.Green;
+            butValueMinus.ForeColor = System.Drawing.Color.White;
+            butValueDiv.ForeColor = System.Drawing.Color.White;
+        }
+
+        private void butValueDiv_Click(object sender, EventArgs e)
+        {
+            labelResult.Text = "";
+            value.sign = "/";
+            value.numDouble = Convert.ToDouble(value.numString);
+            numList.Add(value);
+            butValuePlus.ForeColor = System.Drawing.Color.White;
+            butValueMult.ForeColor = System.Drawing.Color.White;
+            butValueMinus.ForeColor = System.Drawing.Color.White;
+            butValueDiv.ForeColor = System.Drawing.Color.Green;
+        }
+
+        private void butValuePlus_Click(object sender, EventArgs e)
+        {
+            labelResult.Text = "";
+            value.sign = "+";
+            value.numDouble = Convert.ToDouble(value.numString);
+            numList.Add(value);
+            butValuePlus.ForeColor = System.Drawing.Color.Green;
+            butValueMult.ForeColor = System.Drawing.Color.White;
+            butValueMinus.ForeColor = System.Drawing.Color.White;
+            butValueDiv.ForeColor = System.Drawing.Color.White;
         }
     }
 }

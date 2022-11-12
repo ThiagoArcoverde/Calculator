@@ -30,6 +30,7 @@ namespace Calculadora
         private void InitializeComponent()
         {
             this.panelResult = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.labelResult = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.butNum0 = new System.Windows.Forms.Button();
@@ -50,7 +51,6 @@ namespace Calculadora
             this.butQuit = new System.Windows.Forms.Button();
             this.butValueDel = new System.Windows.Forms.Button();
             this.butValueDiv = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panelResult.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -62,15 +62,27 @@ namespace Calculadora
             this.panelResult.Controls.Add(this.panel2);
             this.panelResult.Controls.Add(this.panel1);
             this.panelResult.Location = new System.Drawing.Point(-2, -2);
+            this.panelResult.Margin = new System.Windows.Forms.Padding(2);
             this.panelResult.Name = "panelResult";
-            this.panelResult.Size = new System.Drawing.Size(390, 81);
+            this.panelResult.Size = new System.Drawing.Size(293, 66);
             this.panelResult.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel2.Controls.Add(this.labelResult);
+            this.panel2.Location = new System.Drawing.Point(10, 11);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(270, 40);
+            this.panel2.TabIndex = 2;
             // 
             // labelResult
             // 
             this.labelResult.AutoSize = true;
             this.labelResult.Font = new System.Drawing.Font("Berlin Sans FB", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelResult.Location = new System.Drawing.Point(3, 10);
+            this.labelResult.Location = new System.Drawing.Point(2, 8);
+            this.labelResult.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelResult.Name = "labelResult";
             this.labelResult.Size = new System.Drawing.Size(0, 30);
             this.labelResult.TabIndex = 2;
@@ -78,9 +90,10 @@ namespace Calculadora
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Location = new System.Drawing.Point(0, 94);
+            this.panel1.Location = new System.Drawing.Point(0, 76);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(385, 461);
+            this.panel1.Size = new System.Drawing.Size(289, 375);
             this.panel1.TabIndex = 1;
             // 
             // butNum0
@@ -91,9 +104,10 @@ namespace Calculadora
             this.butNum0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butNum0.Font = new System.Drawing.Font("Berlin Sans FB", 12F);
             this.butNum0.ForeColor = System.Drawing.Color.White;
-            this.butNum0.Location = new System.Drawing.Point(50, 466);
+            this.butNum0.Location = new System.Drawing.Point(38, 379);
+            this.butNum0.Margin = new System.Windows.Forms.Padding(2);
             this.butNum0.Name = "butNum0";
-            this.butNum0.Size = new System.Drawing.Size(75, 40);
+            this.butNum0.Size = new System.Drawing.Size(56, 32);
             this.butNum0.TabIndex = 1;
             this.butNum0.Text = "0";
             this.butNum0.UseVisualStyleBackColor = true;
@@ -107,9 +121,10 @@ namespace Calculadora
             this.butNum1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butNum1.Font = new System.Drawing.Font("Berlin Sans FB", 12F);
             this.butNum1.ForeColor = System.Drawing.Color.White;
-            this.butNum1.Location = new System.Drawing.Point(50, 391);
+            this.butNum1.Location = new System.Drawing.Point(38, 318);
+            this.butNum1.Margin = new System.Windows.Forms.Padding(2);
             this.butNum1.Name = "butNum1";
-            this.butNum1.Size = new System.Drawing.Size(75, 40);
+            this.butNum1.Size = new System.Drawing.Size(56, 32);
             this.butNum1.TabIndex = 2;
             this.butNum1.Text = "1";
             this.butNum1.UseVisualStyleBackColor = true;
@@ -123,9 +138,10 @@ namespace Calculadora
             this.butNum2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butNum2.Font = new System.Drawing.Font("Berlin Sans FB", 12F);
             this.butNum2.ForeColor = System.Drawing.Color.White;
-            this.butNum2.Location = new System.Drawing.Point(160, 391);
+            this.butNum2.Location = new System.Drawing.Point(120, 318);
+            this.butNum2.Margin = new System.Windows.Forms.Padding(2);
             this.butNum2.Name = "butNum2";
-            this.butNum2.Size = new System.Drawing.Size(75, 40);
+            this.butNum2.Size = new System.Drawing.Size(56, 32);
             this.butNum2.TabIndex = 3;
             this.butNum2.Text = "2";
             this.butNum2.UseVisualStyleBackColor = true;
@@ -139,9 +155,10 @@ namespace Calculadora
             this.butNum3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butNum3.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butNum3.ForeColor = System.Drawing.Color.White;
-            this.butNum3.Location = new System.Drawing.Point(270, 391);
+            this.butNum3.Location = new System.Drawing.Point(202, 318);
+            this.butNum3.Margin = new System.Windows.Forms.Padding(2);
             this.butNum3.Name = "butNum3";
-            this.butNum3.Size = new System.Drawing.Size(75, 40);
+            this.butNum3.Size = new System.Drawing.Size(56, 32);
             this.butNum3.TabIndex = 4;
             this.butNum3.Text = "3";
             this.butNum3.UseVisualStyleBackColor = true;
@@ -155,9 +172,10 @@ namespace Calculadora
             this.butNum4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butNum4.Font = new System.Drawing.Font("Berlin Sans FB", 12F);
             this.butNum4.ForeColor = System.Drawing.Color.White;
-            this.butNum4.Location = new System.Drawing.Point(50, 316);
+            this.butNum4.Location = new System.Drawing.Point(38, 257);
+            this.butNum4.Margin = new System.Windows.Forms.Padding(2);
             this.butNum4.Name = "butNum4";
-            this.butNum4.Size = new System.Drawing.Size(75, 40);
+            this.butNum4.Size = new System.Drawing.Size(56, 32);
             this.butNum4.TabIndex = 5;
             this.butNum4.Text = "4";
             this.butNum4.UseVisualStyleBackColor = true;
@@ -171,9 +189,10 @@ namespace Calculadora
             this.butNum5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butNum5.Font = new System.Drawing.Font("Berlin Sans FB", 12F);
             this.butNum5.ForeColor = System.Drawing.Color.White;
-            this.butNum5.Location = new System.Drawing.Point(160, 316);
+            this.butNum5.Location = new System.Drawing.Point(120, 257);
+            this.butNum5.Margin = new System.Windows.Forms.Padding(2);
             this.butNum5.Name = "butNum5";
-            this.butNum5.Size = new System.Drawing.Size(75, 40);
+            this.butNum5.Size = new System.Drawing.Size(56, 32);
             this.butNum5.TabIndex = 6;
             this.butNum5.Text = "5";
             this.butNum5.UseVisualStyleBackColor = true;
@@ -187,9 +206,10 @@ namespace Calculadora
             this.butNum6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butNum6.Font = new System.Drawing.Font("Berlin Sans FB", 12F);
             this.butNum6.ForeColor = System.Drawing.Color.White;
-            this.butNum6.Location = new System.Drawing.Point(270, 316);
+            this.butNum6.Location = new System.Drawing.Point(202, 257);
+            this.butNum6.Margin = new System.Windows.Forms.Padding(2);
             this.butNum6.Name = "butNum6";
-            this.butNum6.Size = new System.Drawing.Size(75, 40);
+            this.butNum6.Size = new System.Drawing.Size(56, 32);
             this.butNum6.TabIndex = 7;
             this.butNum6.Text = "6";
             this.butNum6.UseVisualStyleBackColor = true;
@@ -203,9 +223,10 @@ namespace Calculadora
             this.butNum9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butNum9.Font = new System.Drawing.Font("Berlin Sans FB", 12F);
             this.butNum9.ForeColor = System.Drawing.Color.White;
-            this.butNum9.Location = new System.Drawing.Point(270, 241);
+            this.butNum9.Location = new System.Drawing.Point(202, 196);
+            this.butNum9.Margin = new System.Windows.Forms.Padding(2);
             this.butNum9.Name = "butNum9";
-            this.butNum9.Size = new System.Drawing.Size(75, 40);
+            this.butNum9.Size = new System.Drawing.Size(56, 32);
             this.butNum9.TabIndex = 8;
             this.butNum9.Text = "9";
             this.butNum9.UseVisualStyleBackColor = true;
@@ -219,9 +240,10 @@ namespace Calculadora
             this.butNum8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butNum8.Font = new System.Drawing.Font("Berlin Sans FB", 12F);
             this.butNum8.ForeColor = System.Drawing.Color.White;
-            this.butNum8.Location = new System.Drawing.Point(160, 241);
+            this.butNum8.Location = new System.Drawing.Point(120, 196);
+            this.butNum8.Margin = new System.Windows.Forms.Padding(2);
             this.butNum8.Name = "butNum8";
-            this.butNum8.Size = new System.Drawing.Size(75, 40);
+            this.butNum8.Size = new System.Drawing.Size(56, 32);
             this.butNum8.TabIndex = 9;
             this.butNum8.Text = "8";
             this.butNum8.UseVisualStyleBackColor = true;
@@ -235,9 +257,10 @@ namespace Calculadora
             this.butNum7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butNum7.Font = new System.Drawing.Font("Berlin Sans FB", 12F);
             this.butNum7.ForeColor = System.Drawing.Color.White;
-            this.butNum7.Location = new System.Drawing.Point(50, 241);
+            this.butNum7.Location = new System.Drawing.Point(38, 196);
+            this.butNum7.Margin = new System.Windows.Forms.Padding(2);
             this.butNum7.Name = "butNum7";
-            this.butNum7.Size = new System.Drawing.Size(75, 40);
+            this.butNum7.Size = new System.Drawing.Size(56, 32);
             this.butNum7.TabIndex = 10;
             this.butNum7.Text = "7";
             this.butNum7.UseVisualStyleBackColor = true;
@@ -251,9 +274,10 @@ namespace Calculadora
             this.butValueDot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butValueDot.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butValueDot.ForeColor = System.Drawing.Color.White;
-            this.butValueDot.Location = new System.Drawing.Point(160, 466);
+            this.butValueDot.Location = new System.Drawing.Point(120, 379);
+            this.butValueDot.Margin = new System.Windows.Forms.Padding(2);
             this.butValueDot.Name = "butValueDot";
-            this.butValueDot.Size = new System.Drawing.Size(75, 40);
+            this.butValueDot.Size = new System.Drawing.Size(56, 32);
             this.butValueDot.TabIndex = 11;
             this.butValueDot.Text = ".";
             this.butValueDot.UseVisualStyleBackColor = true;
@@ -267,9 +291,10 @@ namespace Calculadora
             this.butValueEqual.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butValueEqual.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butValueEqual.ForeColor = System.Drawing.Color.White;
-            this.butValueEqual.Location = new System.Drawing.Point(270, 92);
+            this.butValueEqual.Location = new System.Drawing.Point(202, 75);
+            this.butValueEqual.Margin = new System.Windows.Forms.Padding(2);
             this.butValueEqual.Name = "butValueEqual";
-            this.butValueEqual.Size = new System.Drawing.Size(75, 45);
+            this.butValueEqual.Size = new System.Drawing.Size(56, 37);
             this.butValueEqual.TabIndex = 12;
             this.butValueEqual.Text = "=";
             this.butValueEqual.UseVisualStyleBackColor = true;
@@ -282,12 +307,14 @@ namespace Calculadora
             this.butValuePlus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butValuePlus.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butValuePlus.ForeColor = System.Drawing.Color.White;
-            this.butValuePlus.Location = new System.Drawing.Point(50, 91);
+            this.butValuePlus.Location = new System.Drawing.Point(38, 74);
+            this.butValuePlus.Margin = new System.Windows.Forms.Padding(2);
             this.butValuePlus.Name = "butValuePlus";
-            this.butValuePlus.Size = new System.Drawing.Size(75, 45);
+            this.butValuePlus.Size = new System.Drawing.Size(56, 37);
             this.butValuePlus.TabIndex = 13;
             this.butValuePlus.Text = "+";
             this.butValuePlus.UseVisualStyleBackColor = true;
+            this.butValuePlus.Click += new System.EventHandler(this.butValuePlus_Click);
             // 
             // butValueMult
             // 
@@ -297,12 +324,14 @@ namespace Calculadora
             this.butValueMult.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butValueMult.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butValueMult.ForeColor = System.Drawing.Color.White;
-            this.butValueMult.Location = new System.Drawing.Point(160, 92);
+            this.butValueMult.Location = new System.Drawing.Point(120, 75);
+            this.butValueMult.Margin = new System.Windows.Forms.Padding(2);
             this.butValueMult.Name = "butValueMult";
-            this.butValueMult.Size = new System.Drawing.Size(75, 45);
+            this.butValueMult.Size = new System.Drawing.Size(56, 37);
             this.butValueMult.TabIndex = 14;
             this.butValueMult.Text = "×";
             this.butValueMult.UseVisualStyleBackColor = true;
+            this.butValueMult.Click += new System.EventHandler(this.butValueMult_Click);
             // 
             // butValueMinus
             // 
@@ -312,12 +341,14 @@ namespace Calculadora
             this.butValueMinus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butValueMinus.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butValueMinus.ForeColor = System.Drawing.Color.White;
-            this.butValueMinus.Location = new System.Drawing.Point(50, 166);
+            this.butValueMinus.Location = new System.Drawing.Point(38, 135);
+            this.butValueMinus.Margin = new System.Windows.Forms.Padding(2);
             this.butValueMinus.Name = "butValueMinus";
-            this.butValueMinus.Size = new System.Drawing.Size(75, 45);
+            this.butValueMinus.Size = new System.Drawing.Size(56, 37);
             this.butValueMinus.TabIndex = 15;
             this.butValueMinus.Text = "-";
             this.butValueMinus.UseVisualStyleBackColor = true;
+            this.butValueMinus.Click += new System.EventHandler(this.butValueMinus_Click);
             // 
             // butQuit
             // 
@@ -327,9 +358,10 @@ namespace Calculadora
             this.butQuit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butQuit.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butQuit.ForeColor = System.Drawing.Color.White;
-            this.butQuit.Location = new System.Drawing.Point(278, 508);
+            this.butQuit.Location = new System.Drawing.Point(208, 413);
+            this.butQuit.Margin = new System.Windows.Forms.Padding(2);
             this.butQuit.Name = "butQuit";
-            this.butQuit.Size = new System.Drawing.Size(102, 45);
+            this.butQuit.Size = new System.Drawing.Size(76, 37);
             this.butQuit.TabIndex = 16;
             this.butQuit.Text = "Quit";
             this.butQuit.UseVisualStyleBackColor = true;
@@ -342,9 +374,10 @@ namespace Calculadora
             this.butValueDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butValueDel.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butValueDel.ForeColor = System.Drawing.Color.White;
-            this.butValueDel.Location = new System.Drawing.Point(270, 166);
+            this.butValueDel.Location = new System.Drawing.Point(202, 135);
+            this.butValueDel.Margin = new System.Windows.Forms.Padding(2);
             this.butValueDel.Name = "butValueDel";
-            this.butValueDel.Size = new System.Drawing.Size(75, 45);
+            this.butValueDel.Size = new System.Drawing.Size(56, 37);
             this.butValueDel.TabIndex = 17;
             this.butValueDel.Text = "C";
             this.butValueDel.UseVisualStyleBackColor = true;
@@ -357,29 +390,22 @@ namespace Calculadora
             this.butValueDiv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.butValueDiv.Font = new System.Drawing.Font("Berlin Sans FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butValueDiv.ForeColor = System.Drawing.Color.White;
-            this.butValueDiv.Location = new System.Drawing.Point(160, 166);
+            this.butValueDiv.Location = new System.Drawing.Point(120, 135);
+            this.butValueDiv.Margin = new System.Windows.Forms.Padding(2);
             this.butValueDiv.Name = "butValueDiv";
-            this.butValueDiv.Size = new System.Drawing.Size(75, 45);
+            this.butValueDiv.Size = new System.Drawing.Size(56, 37);
             this.butValueDiv.TabIndex = 18;
             this.butValueDiv.Text = "÷";
             this.butValueDiv.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel2.Controls.Add(this.labelResult);
-            this.panel2.Location = new System.Drawing.Point(13, 13);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(360, 49);
-            this.panel2.TabIndex = 2;
+            this.butValueDiv.Click += new System.EventHandler(this.butValueDiv_Click);
             // 
             // Form1
             // 
             this.AllowDrop = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GrayText;
-            this.ClientSize = new System.Drawing.Size(384, 561);
+            this.ClientSize = new System.Drawing.Size(288, 456);
             this.Controls.Add(this.butValueDiv);
             this.Controls.Add(this.butValueDel);
             this.Controls.Add(this.butValueEqual);
@@ -399,9 +425,10 @@ namespace Calculadora
             this.Controls.Add(this.butNum1);
             this.Controls.Add(this.butNum0);
             this.Controls.Add(this.panelResult);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(400, 600);
-            this.MinimumSize = new System.Drawing.Size(400, 600);
+            this.MaximumSize = new System.Drawing.Size(304, 495);
+            this.MinimumSize = new System.Drawing.Size(304, 495);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculator";
