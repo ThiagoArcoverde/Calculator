@@ -90,10 +90,13 @@ namespace Calculadora
 
         private void butValueMinus_Click(object sender, EventArgs e)
         {
-            labelResult.Text = "";
-            value.sign = "-";
-            value.numDouble = Convert.ToDouble(value.numString);
-            numList.Add(value);
+            if (labelResult.Text != "")
+            {
+                value.sign = "-";
+                value.numDouble = Convert.ToDouble(value.numString);
+                numList.Add(value);
+                labelResult.Text = "";
+            }
             butValuePlus.ForeColor = System.Drawing.Color.White;
             butValueMult.ForeColor = System.Drawing.Color.White;
             butValueMinus.ForeColor = System.Drawing.Color.Green;
@@ -102,10 +105,13 @@ namespace Calculadora
 
         private void butValueMult_Click(object sender, EventArgs e)
         {
-            labelResult.Text = "";
-            value.sign = "*";
-            value.numDouble = Convert.ToDouble(value.numString);
-            numList.Add(value);
+            if (labelResult.Text != "")
+            {
+                value.sign = "*";
+                value.numDouble = Convert.ToDouble(value.numString);
+                numList.Add(value);
+                labelResult.Text = "";
+            }
             butValuePlus.ForeColor = System.Drawing.Color.White;
             butValueMult.ForeColor = System.Drawing.Color.Green;
             butValueMinus.ForeColor = System.Drawing.Color.White;
@@ -114,10 +120,13 @@ namespace Calculadora
 
         private void butValueDiv_Click(object sender, EventArgs e)
         {
-            labelResult.Text = "";
-            value.sign = "/";
-            value.numDouble = Convert.ToDouble(value.numString);
-            numList.Add(value);
+            if (labelResult.Text != "")
+            {
+                value.sign = "/";
+                value.numDouble = Convert.ToDouble(value.numString);
+                numList.Add(value);
+                labelResult.Text = "";
+            }
             butValuePlus.ForeColor = System.Drawing.Color.White;
             butValueMult.ForeColor = System.Drawing.Color.White;
             butValueMinus.ForeColor = System.Drawing.Color.White;
@@ -126,10 +135,13 @@ namespace Calculadora
 
         private void butValuePlus_Click(object sender, EventArgs e)
         {
-            labelResult.Text = "";
-            value.sign = "+";
-            value.numDouble = Convert.ToDouble(value.numString);
-            numList.Add(value);
+            if (labelResult.Text != "")
+            {
+                value.sign = "+";
+                value.numDouble = Convert.ToDouble(value.numString);
+                numList.Add(value);
+                labelResult.Text = "";
+            }
             butValuePlus.ForeColor = System.Drawing.Color.Green;
             butValueMult.ForeColor = System.Drawing.Color.White;
             butValueMinus.ForeColor = System.Drawing.Color.White;
